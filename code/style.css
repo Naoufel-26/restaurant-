@@ -1,0 +1,122 @@
+:root {
+  --noir: #0a0a0a;
+  --carte: #161412;
+  --or: #d4a63a;
+  --creme: #f1e6cf;
+  --ligne: #3a3326;
+}
+
+body {
+  margin: 0;
+  background: var(--noir);
+  color: var(--creme);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+header h1,
+h2 {
+  color: var(--or);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--ligne);
+}
+body {
+  font-family: Georgia, serif;
+}
+
+h1,
+h2,
+th {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+header h1 {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--carte);
+}
+
+caption {
+  padding: 0.75rem;
+  font-style: italic;
+  color: var(--or);
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid var(--ligne);
+  text-align: left;
+  vertical-align: middle;
+}
+
+thead th {
+  background: var(--noir);
+  color: var(--or);
+  border-bottom: 2px solid var(--or);
+}
+
+tbody th {
+  background: var(--or);
+  color: var(--noir);
+  font-size: 1.2rem;
+}
+
+tbody tr:hover td {
+  background: #241f17;
+}
+td img {
+  display: block;
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+thead th:last-child,
+td:last-child {
+  text-align: right;
+}
+
+td:last-child {
+  color: var(--or);
+  font-weight: bold;
+  white-space: nowrap;
+}
+td img {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+td img:hover {
+  transform: scale(1.8);
+  z-index: 10;
+  box-shadow: 0 0 0 2px var(--or), 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  td img {
+    transition: none;
+  }
+}
